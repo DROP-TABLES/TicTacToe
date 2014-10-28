@@ -49,10 +49,6 @@ public class Board{
 		return value;
 	}
 
-	public static void main(String args[]){
-		Board b = new Board();
-		System.out.println(b.ToString());
-	}
 	public boolean win()
 	{
 		for(int i = 0; i < 3; i++)
