@@ -5,7 +5,7 @@ import java.io.*;
 public class Main {
 	public static void main(String[] args) {
 		Board b = new Board();
-		System.out.print("Welcome to TicTacToe");
+		System.out.print("Welcome to TicTacToe\n");
 		System.out.print("Press '1' if you want to play Human VS Human \n");
 		System.out.print("Press '2' if you want to play Human VS Computer \n");
 		System.out.print("Press '3' if you want to play Computer VS Computer \n");
