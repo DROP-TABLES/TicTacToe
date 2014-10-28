@@ -31,10 +31,13 @@ public class HumanPlayer extends Player{
 	private int readInt(){
 		try{
 			int r = this.cin.read();
-			return r;
-		}catch(IOException e) {
-           		 println("Please enter a valid integer");
-			return readInt();
-       		}
+			if(r == 32){//we have a space char
+				return readInt();
+			}
+			return r - 48; 
+		}catch(IOException i){
+		println("read failed");
+		return 0;
+		}
 	}
 }
