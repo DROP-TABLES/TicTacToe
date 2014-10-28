@@ -56,7 +56,6 @@ public class Main {
 			int[] a = P1.GetMove();
 			while(!b.PlaceMark(P1.GetMark(), a[0],a[1]))
 			{	a = P1.GetMove();	}
-			System.Out.Print(b.ToString()+"\n");
 			System.out.print(b.ToString() + "\n");
 			if(b.win())
 			{
