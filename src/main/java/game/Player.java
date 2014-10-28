@@ -8,7 +8,7 @@ public class Player{
 		this.mark = m;
 	}
 
-	public String GetMove(){
+	public int[] GetMove(){
 		return null;
 	}
 
