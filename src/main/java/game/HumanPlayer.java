@@ -39,7 +39,7 @@ public class HumanPlayer extends Player{
 	private int readInt(){
 		try{
 			int r = this.cin.read();
-			if(r == 32){//we have a space char
+			if(r == 32 || r == 10){//we have a space char or newline
 				return readInt();
 			}
 			return r - 48; 
