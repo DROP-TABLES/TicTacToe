@@ -37,6 +37,10 @@ public class BoardTest{
 		assertEquals(b.CanPlaceMark(0, 0), true);
 		b.PlaceMark("X", 0, 0);
 		assertEquals(b.CanPlaceMark(0, 0), false);
+		
+		//Out of range returns false
+		assertEquals(b.CanPlaceMark(9001, 9001), false);
+		assertEquals(b.CanPlaceMark(-42, -42), false);
 	}
 
 	@Test
