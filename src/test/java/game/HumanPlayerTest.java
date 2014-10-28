@@ -1,5 +1,6 @@
 package game;
 
+import java.io.*;
 import static org.junit.Assert.*;
 import org.junit.Test;
 
@@ -10,6 +11,12 @@ public class HumanPlayerTest{
 
 	@Test
 	public void testGetMove(){
-		HumanPlayer p = new HumanPlayer("X", System.in);
+		//ToDo: make custom input stream
+		String str = "1 1";
+		InputStream is = new ByteArrayInputStream(str.getBytes());
+		HumanPlayer p = new HumanPlayer("X", is);
+		int[] a = p.GetMove();
+		assertEquals(a[0], 1);
+		assertEquals(a[1], 1);
 	}
 }
