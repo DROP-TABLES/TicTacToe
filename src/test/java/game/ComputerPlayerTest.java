@@ -11,7 +11,7 @@ public class ComputerPlayerTest{
 
 	@Test
 	public void testGetMove(){
-		ComputerPlayer c = new ComputerPlayer("X");
+		ComputerPlayer c = new ComputerPlayer("X", new Board(), "O");
 		int[] a = c.GetMove();
 		assertNotNull(a);
 		assertNotNull(a[0]);

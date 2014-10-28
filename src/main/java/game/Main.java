@@ -1,5 +1,7 @@
 package game;
 
+import java.io.*;
+
 public class Main {
 	public static void main(String[] args) {
 		Board b = new Board();
@@ -7,8 +9,12 @@ public class Main {
 		System.out.print("Press '1' if you want to play Human VS Human \n");
 		System.out.print("Press '2' if you want to play Human VS Computer \n");
 		System.out.print("Press '3' if you want to play Computer VS Computer \n");
-		
-		int typeOfGame = System.In.read();
+		int typeOfGame;
+		try{		
+			typeOfGame = System.in.read();
+		}catch(IOException iex){
+			typeOfGame = 1;
+		}
 		Player P1;
 		Player P2;
 		switch(typeOfGame) {
@@ -28,11 +34,19 @@ public class Main {
 			System.out.print("\n");
 			System.out.print("Player 2 is computerplayer with mark \"O\"\n");
 			P1 = new HumanPlayer(HP1,System.in);
-			P2 = new ComputerPlayer("O");
+			P2 = new ComputerPlayer("O", b, "X");
+			break;
 		case 3:
 			System.out.print("Player 1 : X , Player 2 : O \n");
-			P1 = new ComputerPlayer("X");
-			P2 = new ComputerPlayer("O");
+			P1 = new ComputerPlayer("X", b, "O");
+			P2 = new ComputerPlayer("O", b, "X");
+			break;
+		default:
+			System.out.println("WOW that is a large number assuming you meant 3");
+			System.out.print("Player 1 : X , Player 2 : O \n");
+                        P1 = new ComputerPlayer("X", b, "O");
+                        P2 = new ComputerPlayer("O", b, "X");
+
 		}
 		System.out.print("Let The Games BEGIN ! \n");
 		while(true)
