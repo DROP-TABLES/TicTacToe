@@ -39,4 +39,39 @@ public class Board{
 		Board b = new Board();
 		System.out.println(b.ToString());
 	}
+	public boolean win()
+	{
+		for(int i = 0; i < 3; i++)
+		{
+			if(boxes[i][0] != " " && boxes[i][1] != " " && boxes[i][2] != " ")
+			{
+				if(boxes[i][0] == boxes[i][1] && boxes[i][0] == boxes[i][2])
+				{
+					return true;
+				}
+			}
+			if(boxes[0][i] != " " && boxes[1][i] != " " && boxes[2][i] != " ")
+			{
+				if(boxes[0][i] == boxes[1][i] && boxes[0][i] == boxes[2][i])
+				{
+					return true;
+				}
+			}
+		}
+		if(boxes[0][0] != " " && boxes[1][1] != " " && boxes[2][2] != " ")
+		{
+			if(boxes[0][0] == boxes[1][1] && boxes[0][0] == boxes[2][2])
+			{
+				return true;
+			}
+		}
+		if(boxes[2][0] != " " && boxes[1][1] != " " && boxes[0][2] != " ")
+		{
+			if(boxes[2][0] == boxes[1][1] && boxes[2][0] == boxes[0][2])
+			{
+				return true;
+			}
+		}
+		return false;
+	}
 }

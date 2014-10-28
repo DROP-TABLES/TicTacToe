@@ -39,4 +39,54 @@ public class BoardTest{
 		assertEquals(b.CanPlaceMark(0, 0), false);
 	}
 
+	@Test
+        public void testWin(){
+        	Board b = new Board();
+        	b.PlaceMark("X", 0, 0); //  x | x | x 
+        	b.PlaceMark("X", 1, 0); //    |   |  
+        	b.PlaceMark("X", 2, 0); //    |   |  
+        	assertEquals(b.win(), true);
+        	
+        	b = new Board();
+        	b.PlaceMark("X", 0, 1); //    |   |  
+        	b.PlaceMark("X", 1, 1); //  x | x | x 
+        	b.PlaceMark("X", 2, 1); //    |   |  
+        	assertEquals(b.win(), true);
+        	
+        	b = new Board();
+        	b.PlaceMark("X", 0, 2); //    |   |  
+        	b.PlaceMark("X", 1, 2); //    |   |  
+        	b.PlaceMark("X", 2, 2); //  x | x | x 
+        	assertEquals(b.win(), true);
+        	
+        	b = new Board();
+        	b.PlaceMark("X", 0, 0); //  x |   |  
+        	b.PlaceMark("X", 0, 1); //  x |   |  
+        	b.PlaceMark("X", 0, 2); //  x |   |   
+        	assertEquals(b.win(), true);
+        	
+        	b = new Board();
+        	b.PlaceMark("X", 1, 0); //    | x |  
+        	b.PlaceMark("X", 1, 1); //    | x |  
+        	b.PlaceMark("X", 1, 2); //    | x |   
+        	assertEquals(b.win(), true);
+        	
+        	b = new Board();
+        	b.PlaceMark("X", 2, 0); //    |   | x
+        	b.PlaceMark("X", 2, 1); //    |   | x
+        	b.PlaceMark("X", 2, 2); //    |   | x 
+        	assertEquals(b.win(), true);
+        	
+        	b = new Board();
+        	b.PlaceMark("X", 0, 0); //  x |   |  
+        	b.PlaceMark("X", 1, 1); //    | x |  
+        	b.PlaceMark("X", 2, 2); //    |   | x 
+        	assertEquals(b.win(), true);
+        	
+        	b = new Board();
+        	b.PlaceMark("X", 2, 0); //    |   | x
+        	b.PlaceMark("X", 1, 1); //    | x |  
+        	b.PlaceMark("X", 0, 2); //  x |   |  
+        	assertEquals(b.win(), true);
+        }
 }
