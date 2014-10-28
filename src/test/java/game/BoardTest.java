@@ -106,17 +106,9 @@ public class BoardTest{
 	public void testGetMark(){
 		Board b new Board();
 		b.PlaceMark("X", 0,0);
-		b.PlaceMark("X", 2,2);
+		b.PlaceMark("Y", 1,1);
 		assertEquals(b.GetMark(0, 0), "X");
-		assertEquals(b.GetMark(2, 2), "X");
+		assertEquals(b.GetMark(1, 1), "Y");
+		assertEquals(b.GetMark(2, 2), " ");
 	}
-
-	@Test
-	public void testGetMark(){
-                Board b new Board();
-                b.PlaceMark("X", 0,0);
-                b.PlaceMark("X", 2,2);
-                assertEquals(b.GetMark(0, 0), "X");
-                assertEquals(b.GetMark(2, 2), "X");
-        }
 }
