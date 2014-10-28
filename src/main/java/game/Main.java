@@ -1,8 +1,5 @@
 package game;
 
-import edu.princeton.cs.introcs.StdIn;
-import edu.princeton.cs.introcs.StdOut;
-
 public class Main {
 	public static void main(String[] args) {
 		Board b = new Board();
@@ -11,23 +8,23 @@ public class Main {
 		System.out.print("Press '2' if you want to play Human VS Computer \n");
 		System.out.print("Press '3' if you want to play Computer VS Computer \n");
 		
-		int typeOfGame = StdIn.readInt();
+		int typeOfGame = System.In.read();
 		Player P1;
 		Player P2;
 		switch(typeOfGame) {
 		case 1:
 			System.out.print("Player 1 type in your mark : ");
-			String P1_M = StdIn.readLine();
+			String P1_M = "X";
 			System.out.print("\n");
 			System.out.print("Player 2 type in your mark : ");
-			String P2_M = StdIn.readLine();
+			String P2_M = "O";
 			System.out.print("\n");
 			P1 = new HumanPlayer(P1_M,System.in);
 			P2 = new HumanPlayer(P2_M,System.in);
 			break;
 		case 2:
 			System.out.print("Player 1 type in your mark : ");
-			String HP1 = StdIn.readLine();
+			String HP1 = "X";
 			System.out.print("\n");
 			System.out.print("Player 2 is computerplayer with mark \"O\"\n");
 			P1 = new HumanPlayer(HP1,System.in);
