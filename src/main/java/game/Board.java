@@ -26,7 +26,8 @@ public class Board{
 	}
 
 	public boolean CanPlaceMark(int x, int y){
-		return boxes[x][y] == " ";
+		if(x < 0 || x > 2 || y < 0 || y > 2) return false;
+		else return boxes[x][y] == " ";
 	}
 
 	public boolean PlaceMark(String mark, int x, int y){
