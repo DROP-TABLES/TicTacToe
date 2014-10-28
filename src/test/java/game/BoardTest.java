@@ -89,4 +89,16 @@ public class BoardTest{
         	b.PlaceMark("X", 0, 2); //  x |   |  
         	assertEquals(b.win(), true);
         }
+
+	@Test
+        public void testIsFull(){
+        	Board b = new Board();
+        	assertEquals(b.IsFull(), false);
+        	for(int x = 0; x < 3; x++){
+        		for(int y = 0; y < 3; y++){
+        			b.PlaceMark("X", x, y);
+        		}
+        	}
+        	assertEquals(b.IsFull(), true);
+        }
 }
