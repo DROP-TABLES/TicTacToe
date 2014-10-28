@@ -88,6 +88,13 @@ public class BoardTest{
         	b.PlaceMark("X", 1, 1); //    | x |  
         	b.PlaceMark("X", 0, 2); //  x |   |  
         	assertEquals(b.win(), true);
+
+		b = new Board();
+        	assertEquals(b.win(), false);
+        	b.PlaceMark("X", 0, 0); //  x |   |  
+        	b.PlaceMark("X", 1, 2); //    |   | x
+        	b.PlaceMark("X", 2, 1); //    | x |  
+        	assertEquals(b.win(), false);
         }
 
 	@Test
