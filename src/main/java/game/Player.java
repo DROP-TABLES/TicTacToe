@@ -2,7 +2,7 @@ package game;
 
 public class Player{
 	
-	private String mark;
+	public String mark;
 	
 	public Player(String m){
 		this.mark = m;

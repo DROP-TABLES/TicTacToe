@@ -36,8 +36,8 @@ public class HumanPlayer extends Player{
 			}
 			return r - 48; 
 		}catch(IOException i){
-		println("read failed");
-		return 0;
+			println("read failed");
+			return 0;
 		}
 	}
 }

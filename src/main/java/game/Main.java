@@ -11,7 +11,7 @@ public class Main {
 		System.out.print("Press '3' if you want to play Computer VS Computer \n");
 		int typeOfGame;
 		try{		
-			typeOfGame = System.in.read();
+			typeOfGame = System.in.read() - 48;
 		}catch(IOException iex){
 			typeOfGame = 1;
 		}
@@ -49,12 +49,14 @@ public class Main {
 
 		}
 		System.out.print("Let The Games BEGIN ! \n");
+		System.out.print(b.ToString() + "\n");
 		while(true)
 		{
 			//Player 2 function////////////////////////////////////////////////////////////////////////////
 			int[] a = P1.GetMove();
 			while(!b.PlaceMark(P1.GetMark(), a[0],a[1]))
 			{	a = P1.GetMove();	}
+			System.out.print(b.ToString() + "\n");
 			if(b.win())
 			{
 				System.out.print("Player 1 WINS \n");
@@ -69,6 +71,7 @@ public class Main {
 			a = P2.GetMove();
 			while(!b.PlaceMark(P2.GetMark(), a[0],a[1]))
 			{	a = P2.GetMove();	}
+			System.out.print(b.ToString() + "\n");
 			if(b.win())
 			{
 				System.out.print("Player 2 WINS \n");
