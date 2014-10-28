@@ -16,8 +16,16 @@ public class HumanPlayer extends Player{
 	public int[] GetMove(){
 		println("please enter a x value");
 		int x = readInt();
+		while(x < 0 || x > 2) {
+			System.out.println("Not a valid x value (0-2)");
+			x = readInt();
+		}
 		println("please enter a y value");
 		int y = readInt();
+		while(y < 0 || y > 2) {
+			System.out.println("Not a valid y value (0-2)");
+			y = readInt();
+		}
 		int[] r = new int[2];
 		r[0] = x;
 		r[1] = y;
