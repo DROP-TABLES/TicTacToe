@@ -21,6 +21,10 @@ public class Board{
 		return true;
 	}
 
+	public String GetMark(int x, int y){
+		return boxes[x][y];
+	}
+
 	public boolean CanPlaceMark(int x, int y){
 		return boxes[x][y] == " ";
 	}
