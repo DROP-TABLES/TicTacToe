@@ -12,7 +12,7 @@ public class BoardTest{
 	public void testToString(){
 		String line = "-----";
 		Board b = new Board();
-		String want =	" | | \n" +
+		String want =	"\n | | \n" +
 				line + "\n" +
 				" | | \n" +
 				line + "\n" +
