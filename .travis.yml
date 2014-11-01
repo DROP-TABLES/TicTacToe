@@ -6,4 +6,5 @@ jdk:
 
 script:
   - ./gradlew check
-  - ./gradlew seleniumXvfb
+# compile and execute unit-tests
+  - ./gradlew test
