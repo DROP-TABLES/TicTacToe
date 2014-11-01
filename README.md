@@ -1,3 +1,5 @@
+https://travis-ci.org/DROP-TABLES/TicTacToe.svg?branch=master
+
 TicTacToe
 =========
 
