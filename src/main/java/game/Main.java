@@ -2,21 +2,29 @@ package game;
 
 import java.io.*;
 
-public class Main {
-	public static void main(String[] args) {
+public class Main 
+{
+	public static void main(String[] args) 
+	{	
 		Board b = new Board();
+		
 		System.out.print("Welcome to TicTacToe\n");
 		System.out.print("Press '1' if you want to play Human VS Human \n");
 		System.out.print("Press '2' if you want to play Human VS Computer \n");
 		System.out.print("Press '3' if you want to play Computer VS Computer \n");
+		
 		int typeOfGame;
+		
 		try{		
 			typeOfGame = System.in.read() - 48;
-		}catch(IOException iex){
+		}
+		catch(IOException iex){
 			typeOfGame = 1;
 		}
+		
 		Player P1;
 		Player P2;
+		
 		switch(typeOfGame) {
 		case 1:
 			System.out.print("Player 1 type in your mark : ");
@@ -50,41 +58,52 @@ public class Main {
 		}
 		System.out.print("Let The Games BEGIN ! \n");
 		System.out.print(b.ToString() + "\n");
+		
 		while(true)
 		{
 			//Player 2 function////////////////////////////////////////////////////////////////////////////
 			int[] a = P1.GetMove();
+			
 			while(!b.PlaceMark(P1.GetMark(), a[0],a[1]))
-			{	a = P1.GetMove();	}
+			{	
+				a = P1.GetMove();	
+			}
 			System.out.print(b.ToString() + "\n");
+			
 			if(b.win())
 			{
 				System.out.print("Player 1 WINS \n");
 				break;
 			}
+			
 			if(b.IsFull())
 			{
-				System.out.print("You Both lose");
+				System.out.print("You both LOSE");
 				break;
 			}
-			//PLayer 2 function///////////////////////////////////////////////////////////////////////////
+			
+			//Player 2 function///////////////////////////////////////////////////////////////////////////
 			a = P2.GetMove();
+			
 			while(!b.PlaceMark(P2.GetMark(), a[0],a[1]))
-			{	a = P2.GetMove();	}
+			{	
+				a = P2.GetMove();
+			}
 			System.out.print(b.ToString() + "\n");
+				
 			if(b.win())
 			{
 				System.out.print("Player 2 WINS \n");
 				break;
 			}
+				
 			if(b.IsFull())
 			{
-				System.out.print("You Both lose");
+				System.out.print("You both LOSE");
 				break;
 			}
-			
 		}
+		System.out.print("\n");
 		System.out.print("Game Has Ended \n");
 	}
 }
-

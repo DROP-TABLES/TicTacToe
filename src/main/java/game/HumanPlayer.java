@@ -14,13 +14,13 @@ public class HumanPlayer extends Player{
 	
 	@Override
 	public int[] GetMove(){
-		println("please enter a x value");
+		println("Please enter a x value");
 		int x = readInt();
 		while(x < 0 || x > 2) {
 			System.out.println("Not a valid x value (0-2)");
 			x = readInt();
 		}
-		println("please enter a y value");
+		println("Please enter a y value");
 		int y = readInt();
 		while(y < 0 || y > 2) {
 			System.out.println("Not a valid y value (0-2)");
@@ -44,7 +44,7 @@ public class HumanPlayer extends Player{
 			}
 			return r - 48; 
 		}catch(IOException i){
-			println("read failed");
+			println("Read failed!");
 			return 0;
 		}
 	}

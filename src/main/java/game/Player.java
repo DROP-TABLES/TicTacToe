@@ -15,5 +15,4 @@ public class Player{
 	public String GetMark(){
 		return mark;
 	}
-
 }

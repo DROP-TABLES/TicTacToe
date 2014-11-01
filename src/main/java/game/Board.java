@@ -1,6 +1,7 @@
 package game;
 
-public class Board{
+public class Board
+{
 	private String[][] boxes;
 
 	public Board(){
@@ -34,51 +35,44 @@ public class Board{
 		if(CanPlaceMark(x, y)){
 			boxes[x][y] = mark;
 			return true;
-		}else{
+		}
+		else{
 			return false;
 		}
 	}
 
 	public String ToString(){
 		String line = "-----\n";
-		String value = boxes[0][0] + "|" + boxes[1][0] + "|" + boxes[2][0] +
-				"\n" + line +
-				boxes[0][1] + "|" + boxes[1][1] + "|" + boxes[2][1] +
-				"\n" + line +
-				boxes[0][2] + "|" + boxes[1][2] + "|" + boxes[2][2];
+		String value = "\n" + boxes[0][0] + "|" + boxes[1][0] + "|" + boxes[2][0] +
+			       "\n" + line + boxes[0][1] + "|" + boxes[1][1] + "|" + boxes[2][1] +
+                               "\n" + line + boxes[0][2] + "|" + boxes[1][2] + "|" + boxes[2][2];
 		return value;
 	}
 
-	public boolean win()
-	{
-		for(int i = 0; i < 3; i++)
-		{
+	public boolean win(){
+		for(int i = 0; i < 3; i++) {
 			if(boxes[i][0] != " " && boxes[i][1] != " " && boxes[i][2] != " ")
 			{
-				if(boxes[i][0] == boxes[i][1] && boxes[i][0] == boxes[i][2])
-				{
+				if(boxes[i][0] == boxes[i][1] && boxes[i][0] == boxes[i][2]) {
 					return true;
 				}
 			}
-			if(boxes[0][i] != " " && boxes[1][i] != " " && boxes[2][i] != " ")
-			{
-				if(boxes[0][i] == boxes[1][i] && boxes[0][i] == boxes[2][i])
-				{
+
+			if(boxes[0][i] != " " && boxes[1][i] != " " && boxes[2][i] != " ") {
+				if(boxes[0][i] == boxes[1][i] && boxes[0][i] == boxes[2][i]) {
 					return true;
 				}
 			}
 		}
-		if(boxes[0][0] != " " && boxes[1][1] != " " && boxes[2][2] != " ")
-		{
-			if(boxes[0][0] == boxes[1][1] && boxes[0][0] == boxes[2][2])
-			{
+
+		if(boxes[0][0] != " " && boxes[1][1] != " " && boxes[2][2] != " ") {
+			if(boxes[0][0] == boxes[1][1] && boxes[0][0] == boxes[2][2]) {
 				return true;
 			}
 		}
-		if(boxes[2][0] != " " && boxes[1][1] != " " && boxes[0][2] != " ")
-		{
-			if(boxes[2][0] == boxes[1][1] && boxes[2][0] == boxes[0][2])
-			{
+		
+		if(boxes[2][0] != " " && boxes[1][1] != " " && boxes[0][2] != " ") {
+			if(boxes[2][0] == boxes[1][1] && boxes[2][0] == boxes[0][2]) {
 				return true;
 			}
 		}
