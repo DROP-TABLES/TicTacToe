@@ -1,4 +1,6 @@
-https://travis-ci.org/DROP-TABLES/TicTacToe.svg?branch=master
+[![Build Status](https://travis-ci.org/DROP-TABLES/TicTacToe/TicTacToe.png)]
+(https://travis-ci.org/DROP-TABLES/TicTacToe
+)
 
 TicTacToe
 =========
