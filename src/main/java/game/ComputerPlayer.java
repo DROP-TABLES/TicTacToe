@@ -6,11 +6,11 @@ public class ComputerPlayer extends Player{
 	private Board bor;
 	private String op;
 
-	public ComputerPlayer(String m, Board b, String oponent){
+	public ComputerPlayer(String m, Board b, String opponent){
 		super(m);
 		index = 0;
 		bor = b;
-		op = oponent;
+		op = opponent;
 	}
 
 	private int[] BlockMove(){
@@ -50,5 +50,4 @@ public class ComputerPlayer extends Player{
 		index++;
 		return a;
 	}
-
 }

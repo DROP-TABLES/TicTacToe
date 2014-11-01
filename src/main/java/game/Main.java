@@ -64,7 +64,7 @@ public class Main {
 			}
 			if(b.IsFull())
 			{
-				System.out.print("You Both lose");
+				System.out.print("You both LOSE");
 				break;
 			}
 			//PLayer 2 function///////////////////////////////////////////////////////////////////////////
@@ -79,7 +79,7 @@ public class Main {
 			}
 			if(b.IsFull())
 			{
-				System.out.print("You Both lose");
+				System.out.print("You both LOSE");
 				break;
 			}
 			
