@@ -1,0 +1,7 @@
+#!/bin/bash
+
+gradle clean
+gradle jar
+chmod +x ~/TicTacToe/build/libs/TicTacToe.jar
+java -jar ~/TicTacToe/build/libs/TicTacToe.jar
+mv ~/TicTacToe/build/libs/TicTacToe.jar ~/TicTacToe/build/tmp/
