@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/DROP-TABLES/TicTacToe/TicTacToe.png)]
+[![Build Status](https://travis-ci.org/DROP-TABLES/TicTacToe.png)]
 (https://travis-ci.org/DROP-TABLES/TicTacToe
 )
 
