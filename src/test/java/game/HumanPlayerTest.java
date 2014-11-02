@@ -11,10 +11,11 @@ public class HumanPlayerTest{
 
 	@Test
 	public void testGetMove(){
-		//ToDo: make custom input stream
+		//here we make a custom input stream
 		String str = "1 1 0 2";
 		InputStream is = new ByteArrayInputStream(str.getBytes());
-		HumanPlayer p = new HumanPlayer("X", is);
+		// give the human player our custom input stream
+		HumanPlayer p = new HumanPlayer("X", is); // reads string like console input
 		int[] a = p.GetMove();
 		assertEquals(a[0], 1);
 		assertEquals(a[1], 1);
