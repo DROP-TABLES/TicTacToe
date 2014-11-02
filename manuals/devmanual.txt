@@ -1,0 +1,60 @@
+Hugbúnaðarfræði             
+	
+Kennari: Hannes Pétursson
+
+Háskólinn í Reykjavík
+
+Haust 2014
+
+Dev Manual
+
+Síðannarverkefni – 19.09.2014
+
+Dagur Arinbjörn Daníelsson
+Elvar Laxdal
+Kristinn Júlíusson
+Rafael Motybel
+Steinar Árnason
+
+1. Introduction
+
+Follow steps from 1-12 below to be able to build your code on a fresh machine.
+
+2. Getting started
+ 
+1. Get fresh machine with Linux environment.
+ 
+2. Create an account on www.github.com
+ 
+3. Open shell in Linux
+ 
+4. Generate SSH-key using:
+"ssh-keygen -t rsa -C "<your email>"
+ 
+5. Copy public ssh-key using:
+"cd ~/.ssh"
+"cat id_rsa.pub"
+ 
+6. Go to www.github.com to your account and add your key under Settings->SSH Keys->Add SSH key
+ 
+7. Install git using:
+"sudo apt-get install git"
+ 
+8. Install Gradle using:
+“sudo apt-get update”
+"sudo apt-get install gradle"
+ 9. Install java 1.7 using:
+"sudo apt-get install openjdk-7-jdk"
+ 
+10. Create new repository on github.
+Create new.. ->New repository -> and specify the name of your repo.
+ 
+11. Initialize your git repository using:
+"git init"
+ 
+12. Clone your repository using:
+"git clone <content of SSH clone URL on github>"
+ 
+ 
+Other useful things:
+Sublime text 2, is a good way to work with code on your machine, instead of using command line.

@@ -1,0 +1,38 @@
+Hugbúnaðarfræði             
+	
+Kennari: Hannes Pétursson
+
+Háskólinn í Reykjavík
+
+Haust 2014
+
+Design Report
+
+Síðannarverkefni – 19.09.2014
+
+Dagur Arinbjörn Daníelsson
+Elvar Laxdal
+Kristinn Júlíusson
+Rafael Motybel
+Steinar Árnason
+
+Design concept
+
+Ákveðið var að skipta verkefninu eins litlar einingar og hægt var og láta hvern klasa sjá um hvern einangraðan part af verkefninu. Ákveðið var að nota grunn Player klasa sem interface svo að hægt væri að gera leiki Human vs Human, Human vs Computer og Computer vs Computer.
+Við byrjuðum því á að gera einfalt klasarit sem viðmið og notuðum það í verkefninu og uppfærðum eftir þörfum. Útfærslan af klasaritinu hér fyrir neðan er klasaritið eins og það er fyrir sig í útfærslu.
+
+Klasarit
+
+Eftirfarandi klasarit sýnir alla klasa, föll sem allir klasar hafa og hvaða breytur þeir eiga.
+
+Hlutverk klasana
+
+ComputerPlayer klasinn notast við mjög frumstæða gervigreind sem að tekur mið við núverandi stöðu í borðinu til þess að gefa reit til að setja í.
+
+Human klasinn notast við inntak notandans til að geta spilað leikinn.
+
+Player klasinn skilgreiningir interfaceið sem notast við til að búa til HumanPlayer eða ComputerPlayer ásamt að útfæra GetMark.
+
+Board klasinn heldur utan um borðið og hvaða merkingar eru í borðinu X eða O.
+
+Main klasinn býr til tvö tilvik af Player klasanum og keyrir svo leikinn.

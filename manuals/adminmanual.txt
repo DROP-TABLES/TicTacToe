@@ -1,0 +1,29 @@
+Hugbúnaðarfræði             
+	
+Kennari: Hannes Pétursson
+
+Háskólinn í Reykjavík
+
+Haust 2014
+
+Admin Manual
+
+Síðannarverkefni – 19.09.2014
+
+Dagur Arinbjörn Daníelsson
+Elvar Laxdal
+Kristinn Júlíusson
+Rafael Motybel
+Steinar Árnason
+
+Introduction
+
+This manual will guide you through the process of getting the latest version of TicTacToe by ‘DROP TABLES Student;--  on your linux machine.
+
+How to install TicTacToe
+
+1. Fetch the TicTacToe repository at https://github.com/DROP-TABLES/TicTacToe and save it anywhere you like.
+
+2. From the root directory of the project run ./bin/install (this may take a while).
+
+3. Navigate to the tictac folder that was created in your home folder and there in the bin folder you will find your executable programs.
