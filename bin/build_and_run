@@ -4,4 +4,4 @@
 ./bin/build
 ./bin/check
 ./bin/install
-./bin/deploy
+./bin/run
