@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="game.ComputerPlayerTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2014-11-02T17:43:45" hostname="Kristinns-MacBook-Air.local" time="0.002">
-  <properties/>
-  <testcase name="testGetMove" classname="game.ComputerPlayerTest" time="0.002"/>
-  <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>
