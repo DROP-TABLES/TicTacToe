@@ -1,0 +1,6 @@
+#!/bin/bash
+./gradlew clean
+./gradlew build
+mkdir build/CodeInspection
+./pmd-bin-5.2.0/bin/run.sh pmd -dir src/main/java/game/ -f html -rulesets java-basic,java-design > build/CodeInspection/Index.html
+
