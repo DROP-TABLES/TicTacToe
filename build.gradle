@@ -10,7 +10,7 @@
 // Apply the java plugin to add support for Java
 apply plugin: 'java'
 apply plugin: 'application'
-
+apply plugin: 'jacoco'
 // declaration of the main class we want to run
 mainClassName = "game.Main"
 
@@ -37,7 +37,10 @@ jar {
                 attributes("Main-Class": "game.Main")
         }
 }
-
+jacoco {
+    toolVersion = "0.7.1.201405082137"
+    reportsDir = file("$buildDir/customJacocoReportDir")
+}
 // task that install app before heroku deploy
 task stage{
     dependsOn installApp 
