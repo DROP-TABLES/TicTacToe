@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../.resources/report.css" type="text/css"/><link rel="shortcut icon" href="../.resources/report.gif" type="image/gif"/><title>Main.java</title><link rel="stylesheet" href="../.resources/prettify.css" type="text/css"/><script type="text/javascript" src="../.resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../.sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">TicTacToe</a> &gt; <a href="index.source.html" class="el_package">game</a> &gt; <span class="el_source">Main.java</span></div><h1>Main.java</h1><pre class="source lang-java linenums">package game;
+
+import java.io.*;
+
+<span class="nc" id="L5">public class Main </span>
+{
+	public static void main(String[] args) 
+	{	
+<span class="nc" id="L9">		Board b = new Board();</span>
+		
+<span class="nc" id="L11">		System.out.print(&quot;Welcome to TicTacToe\n&quot;);</span>
+<span class="nc" id="L12">		System.out.print(&quot;Press '1' if you want to play Human VS Human \n&quot;);</span>
+<span class="nc" id="L13">		System.out.print(&quot;Press '2' if you want to play Human VS Computer \n&quot;);</span>
+<span class="nc" id="L14">		System.out.print(&quot;Press '3' if you want to play Computer VS Computer \n&quot;);</span>
+		
+		int typeOfGame;
+		
+		try{		
+<span class="nc" id="L19">			typeOfGame = System.in.read() - 48;</span>
+		}
+<span class="nc" id="L21">		catch(IOException iex){</span>
+<span class="nc" id="L22">			typeOfGame = 1;</span>
+<span class="nc" id="L23">		}</span>
+		
+		Player P1;
+		Player P2;
+		
+<span class="nc bnc" id="L28" title="All 4 branches missed.">		switch(typeOfGame) {</span>
+		case 1:
+<span class="nc" id="L30">			System.out.print(&quot;Player 1 type in your mark : &quot;);</span>
+<span class="nc" id="L31">			String P1_M = &quot;X&quot;;</span>
+<span class="nc" id="L32">			System.out.print(&quot;\n&quot;);</span>
+<span class="nc" id="L33">			System.out.print(&quot;Player 2 type in your mark : &quot;);</span>
+<span class="nc" id="L34">			String P2_M = &quot;O&quot;;</span>
+<span class="nc" id="L35">			System.out.print(&quot;\n&quot;);</span>
+<span class="nc" id="L36">			P1 = new HumanPlayer(P1_M,System.in);</span>
+<span class="nc" id="L37">			P2 = new HumanPlayer(P2_M,System.in);</span>
+<span class="nc" id="L38">			break;</span>
+		case 2:
+<span class="nc" id="L40">			System.out.print(&quot;Player 1 type in your mark : &quot;);</span>
+<span class="nc" id="L41">			String HP1 = &quot;X&quot;;</span>
+<span class="nc" id="L42">			System.out.print(&quot;\n&quot;);</span>
+<span class="nc" id="L43">			System.out.print(&quot;Player 2 is computerplayer with mark \&quot;O\&quot;\n&quot;);</span>
+<span class="nc" id="L44">			P1 = new HumanPlayer(HP1,System.in);</span>
+<span class="nc" id="L45">			P2 = new ComputerPlayer(&quot;O&quot;, b, &quot;X&quot;);</span>
+<span class="nc" id="L46">			break;</span>
+		case 3:
+<span class="nc" id="L48">			System.out.print(&quot;Player 1 : X , Player 2 : O \n&quot;);</span>
+<span class="nc" id="L49">			P1 = new ComputerPlayer(&quot;X&quot;, b, &quot;O&quot;);</span>
+<span class="nc" id="L50">			P2 = new ComputerPlayer(&quot;O&quot;, b, &quot;X&quot;);</span>
+<span class="nc" id="L51">			break;</span>
+		default:
+<span class="nc" id="L53">			System.out.println(&quot;WOW that is a large number assuming you meant 3&quot;);</span>
+<span class="nc" id="L54">			System.out.print(&quot;Player 1 : X , Player 2 : O \n&quot;);</span>
+<span class="nc" id="L55">                        P1 = new ComputerPlayer(&quot;X&quot;, b, &quot;O&quot;);</span>
+<span class="nc" id="L56">                        P2 = new ComputerPlayer(&quot;O&quot;, b, &quot;X&quot;);</span>
+
+		}
+<span class="nc" id="L59">		System.out.print(&quot;Let The Games BEGIN ! \n&quot;);</span>
+<span class="nc" id="L60">		System.out.print(b.ToString() + &quot;\n&quot;);</span>
+		
+		while(true)
+		{
+			//Player 2 function////////////////////////////////////////////////////////////////////////////
+<span class="nc" id="L65">			int[] a = P1.GetMove();</span>
+			
+<span class="nc bnc" id="L67" title="All 2 branches missed.">			while(!b.PlaceMark(P1.GetMark(), a[0],a[1]))</span>
+			{	
+<span class="nc" id="L69">				a = P1.GetMove();	</span>
+			}
+<span class="nc" id="L71">			System.out.print(b.ToString() + &quot;\n&quot;);</span>
+			
+<span class="nc bnc" id="L73" title="All 2 branches missed.">			if(b.win())</span>
+			{
+<span class="nc" id="L75">				System.out.print(&quot;Player 1 WINS \n&quot;);</span>
+<span class="nc" id="L76">				break;</span>
+			}
+			
+<span class="nc bnc" id="L79" title="All 2 branches missed.">			if(b.IsFull())</span>
+			{
+<span class="nc" id="L81">				System.out.print(&quot;You both LOSE&quot;);</span>
+<span class="nc" id="L82">				break;</span>
+			}
+			
+			//Player 2 function///////////////////////////////////////////////////////////////////////////
+<span class="nc" id="L86">			a = P2.GetMove();</span>
+			
+<span class="nc bnc" id="L88" title="All 2 branches missed.">			while(!b.PlaceMark(P2.GetMark(), a[0],a[1]))</span>
+			{	
+<span class="nc" id="L90">				a = P2.GetMove();</span>
+			}
+<span class="nc" id="L92">			System.out.print(b.ToString() + &quot;\n&quot;);</span>
+				
+<span class="nc bnc" id="L94" title="All 2 branches missed.">			if(b.win())</span>
+			{
+<span class="nc" id="L96">				System.out.print(&quot;Player 2 WINS \n&quot;);</span>
+<span class="nc" id="L97">				break;</span>
+			}
+				
+<span class="nc bnc" id="L100" title="All 2 branches missed.">			if(b.IsFull())</span>
+			{
+<span class="nc" id="L102">				System.out.print(&quot;You both LOSE&quot;);</span>
+<span class="nc" id="L103">				break;</span>
+			}
+<span class="nc" id="L105">		}</span>
+<span class="nc" id="L106">		System.out.print(&quot;\n&quot;);</span>
+<span class="nc" id="L107">		System.out.print(&quot;Game Has Ended \n&quot;);</span>
+<span class="nc" id="L108">	}</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.1.201405082137</span></div></body></html>

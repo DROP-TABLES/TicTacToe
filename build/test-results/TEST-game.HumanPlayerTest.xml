@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="game.HumanPlayerTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2014-11-02T17:43:45" hostname="Kristinns-MacBook-Air.local" time="0.001">
+  <properties/>
+  <testcase name="testGetMove" classname="game.HumanPlayerTest" time="0.001"/>
+  <system-out><![CDATA[Please enter a x value
+Please enter a y value
+Please enter a x value
+Please enter a y value
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
