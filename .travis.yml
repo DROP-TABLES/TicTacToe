@@ -11,3 +11,4 @@ script:
 deploy:
     provider: heroku
     api_key: b1bb5055-8428-48bd-a455-e37423cde6f8
+    app: hgbtictactoe
