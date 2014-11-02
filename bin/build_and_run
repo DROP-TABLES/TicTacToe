@@ -5,3 +5,5 @@
 ./bin/check
 ./bin/install
 ./bin/run
+./gradlew jacocoTestReport
+./bin/inspection
