@@ -22,26 +22,30 @@ public class BoardTest{
 	}
 
 	@Test
-	public void testCanPlaceMark(){
-		Board b = new Board();
-		for(int x = 0; x < 3; x++){
-			for(int y = 0; y < 3; y++){
-				assertEquals(b.CanPlaceMark(x, y), true);
-			}
-		}
-	}
+        public void testCanPlaceMark(){
+                Board b = new Board();
+		//Checks if everything is emptyas it should be
+                for(int x = 0; x < 3; x++){
+                        for(int y = 0; y < 3; y++){
+                                assertEquals(b.CanPlaceMark(x, y), true);
+                        }
+                }
 
-	@Test
-	public void testPlaceMark(){
-		Board b = new Board();
-		assertEquals(b.CanPlaceMark(0, 0), true);
-		b.PlaceMark("X", 0, 0);
-		assertEquals(b.CanPlaceMark(0, 0), false);
-		
-		//Out of range returns false
-		assertEquals(b.CanPlaceMark(9001, 9001), false);
-		assertEquals(b.CanPlaceMark(-42, -42), false);
-	}
+		//Checks a spot that shouldn't allow PlaceMark
+		b.PlaceMark("X", 1, 1);
+		assertEquals(b.CanPlaceMark(1, 1), false);
+
+                //Out of range returns false
+                assertEquals(b.CanPlaceMark(9001, 9001), false);
+                assertEquals(b.CanPlaceMark(-42, -42), false);
+        }
+
+        @Test
+        public void testPlaceMark(){
+                Board b = new Board();
+                assertEquals(b.PlaceMark("X", 0, 0), true);
+                assertEquals(b.PlaceMark("X", 0, 0), false);
+        }
 
 	@Test
         public void testWin(){
