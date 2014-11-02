@@ -39,7 +39,7 @@ jar {
 }
 jacoco {
     toolVersion = "0.7.1.201405082137"
-    reportsDir = file("$buildDir/customJacocoReportDir")
+    reportsDir = file("$buildDir/reports/JaCoCo")
 }
 // task that install app before heroku deploy
 task stage{
